@@ -1,0 +1,14 @@
+name: ServerMenuSystem
+version: 1.0.0
+api: [3.0.0 4.0.0]
+descrption: サーバーメニューの実装
+author: Meru
+main: Meru\ServerMenuSystem\Main
+load: POSTWORLD
+
+commnands:
+  menu:
+    descrption: サーバーメニューを表示：/mでも使えます。
+    aliases:
+      - m
+    usage: "/menu or /m"
