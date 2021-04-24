@@ -20,6 +20,7 @@ class Main extends PluginBase implements Listener {
      * @var Config
      */
     private $Config;
+    private $Notice;
 
     public function onEnable() {
         $this->getLogger()->notice('読み込みました。　現在の実行バージョン：' . $this->getDescription()->getVersion());
@@ -30,6 +31,13 @@ class Main extends PluginBase implements Listener {
             'Info' => '現在お知らせはありません。',
             'button' => '§c閉じる / プレイに戻る'
         ));
+    }
+    
+    public function onCommand(Command $command, CommandSender $sender, string $label, array $args):bool{
+        if(isset($args[0]){
+            $this->Notice->set("Info", (string)$args[0]);
+        }    
+        return true;
     }
 
     public function onJoin(PlayerJoinEvent $playerJoinEvent) {
